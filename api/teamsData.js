@@ -29,7 +29,15 @@ const createTeam = (newTeamObj) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// UPDATE TEAM
+const updateTeam = (teamObj) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/teams/${teamObj.firebaseKey}.json`, teamObj)
+    .then(() => getTeams(teamObj.uid).then(resolve))
+    .catch(reject);
+});
+
 export {
   getTeams,
   createTeam,
+  updateTeam,
 };
