@@ -24,7 +24,7 @@ export default function TeamRoster() {
   return (
     <div>
       <header>
-        <h1>Team</h1>
+        <h1>Players</h1>
         <Search players={players} setFilteredPlayers={setFilteredPlayers} />
       </header>
       <div className="cards-container">
