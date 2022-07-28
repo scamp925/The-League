@@ -12,6 +12,7 @@ const initialState = {
   name: '',
   position: '',
   jerseyNumber: '',
+  team_id: '',
 };
 function PlayerForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
@@ -69,6 +70,7 @@ PlayerForm.propTypes = {
     name: PropTypes.string,
     position: PropTypes.string,
     jerseyNumber: PropTypes.number,
+    team_id: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
 };
