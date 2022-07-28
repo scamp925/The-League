@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
-import { useAuth } from '../utils/context/authContext';
-import { createPlayer, updatePlayer } from '../api/playerData';
+import { useAuth } from '../../utils/context/authContext';
+import { createPlayer, updatePlayer } from '../../api/playersData';
 
 const initialState = {
   imageUrl: '',

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
-import { getPlayers } from '../api/playerData';
-import PlayerCards from '../components/PlayerCards';
+import { getPlayers } from '../api/playersData';
+import PlayerCards from '../components/cards/PlayerCards';
 import { useAuth } from '../utils/context/authContext';
 
 function Home() {
