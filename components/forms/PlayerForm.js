@@ -34,11 +34,11 @@ function PlayerForm({ obj }) {
     e.preventDefault();
     if (obj?.firebaseKey) {
       updatePlayer(formInput)
-        .then(() => router.push('/team'));
+        .then(() => router.push('/players/teamRoster'));
     } else {
       const payload = { ...formInput, uid: user.uid };
       createPlayer(payload).then(() => {
-        router.push('/team');
+        router.push('/players/teamRoster');
       });
     }
   };

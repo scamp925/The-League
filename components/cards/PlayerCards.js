@@ -25,7 +25,7 @@ function PlayerCards({ playerObj, onUpdate }) {
           </section>
         </Card.Body>
         <footer>
-          <Link href={`/${playerObj.firebaseKey}`} passHref>
+          <Link href={`/players/edit/${playerObj.firebaseKey}`} passHref>
             <Button variant="info" className="edit-btn">Edit</Button>
           </Link>
           <Button variant="danger" onClick={deleteThisPlayer}>Delete</Button>
