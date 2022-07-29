@@ -21,7 +21,7 @@ export default function Teams() {
   return (
     <div>
       <header>
-        <h1>Team</h1>
+        <h1>Teams</h1>
       </header>
       <div className="cards-container">
         {teams?.map((team) => (
