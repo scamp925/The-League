@@ -54,6 +54,7 @@ PlayerCards.propTypes = {
     name: PropTypes.string,
     position: PropTypes.string,
     jerseyNumber: PropTypes.number,
+    team_id: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };

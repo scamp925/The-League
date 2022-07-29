@@ -63,16 +63,14 @@ function PlayerForm({ obj }) {
       <FloatingLabel controlId="floatingInput4" label="Image URL" className="mb-3">
         <Form.Control type="url" placeholder="Enter image url" name="imageUrl" value={formInput.imageUrl} onChange={handleChange} required />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingSelect" label="Team">
-        <Form.Select
-          aria-label="Team"
-          name="team_id"
-          onChange={handleChange}
-          className="mb-3"
-          required
-        >
-          <option value="">Select a Team</option>
-          {
+      <Form.Select
+        name="team_id"
+        onChange={handleChange}
+        className="mb-3"
+        required
+      >
+        <option value="">Select a Team</option>
+        {
             teams.map((team) => (
               <option
                 key={team.firebaseKey}
@@ -83,8 +81,7 @@ function PlayerForm({ obj }) {
               </option>
             ))
           }
-        </Form.Select>
-      </FloatingLabel>
+      </Form.Select>
       <Button type="submit" variant="success" className="form-btn">{obj?.firebaseKey ? 'Update' : 'Add'} Player</Button>
     </Form>
   );
