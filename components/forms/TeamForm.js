@@ -45,7 +45,7 @@ function TeamForm({ obj }) {
   return (
     <div>
       <Form onSubmit={handleSubmit}>
-        <h1 className="text-black mt-5">{obj?.firebaseKey ? 'Update' : 'Add'} Team</h1>
+        <h1 className="text-black mt-5">{obj?.firebaseKey ? 'Update' : 'Add'} a Team</h1>
         <FloatingLabel controlId="floatingInput1" label="Team Name" className="mb-3">
           <Form.Control type="text" placeholder="Gli Azzurri" name="name" value={formInput.name} onChange={handleChange} required />
         </FloatingLabel>
