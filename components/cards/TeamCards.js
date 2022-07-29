@@ -3,8 +3,15 @@ import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
+import { deleteTeamAndPlayers } from '../../api/mergedData';
 
-function TeamCards({ teamObj }) {
+function TeamCards({ teamObj, onUpdate }) {
+  const deleteTeamPlusPlayers = () => {
+    if (window.confirm(`Are you sure you want to delete ${teamObj.name}? Doing so will also delete all associated players.`)) {
+      deleteTeamAndPlayers(teamObj.firebaseKey).then(() => onUpdate());
+    }
+  };
+
   return (
     <div>
       <Card style={{ width: '18rem', margin: '10px' }}>
@@ -19,7 +26,7 @@ function TeamCards({ teamObj }) {
           <Link href={`/teams/edit/${teamObj.firebaseKey}`} passHref>
             <Button variant="info" className="edit-btn">Edit</Button>
           </Link>
-          <Button variant="danger">Delete</Button>
+          <Button variant="danger" onClick={deleteTeamPlusPlayers}>Delete</Button>
         </footer>
       </Card>
     </div>
@@ -32,6 +39,7 @@ TeamCards.propTypes = {
     logoUrl: PropTypes.string,
     name: PropTypes.string,
   }).isRequired,
+  onUpdate: PropTypes.func.isRequired,
 };
 
 export default TeamCards;
