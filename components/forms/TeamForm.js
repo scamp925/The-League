@@ -5,7 +5,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
-import { createTeam } from '../../api/teamsData';
+import { createTeam, updateTeam } from '../../api/teamsData';
 
 const initialState = {
   logoUrl: '',
@@ -31,10 +31,15 @@ function TeamForm({ obj }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const payload = { ...formInput, uid: user.uid };
-    createTeam(payload).then(() => {
-      router.push('/teams/teams');
-    });
+    if (obj.firebaseKey) {
+      updateTeam(formInput)
+        .then(() => router.push('/teams/teams'));
+    } else {
+      const payload = { ...formInput, uid: user.uid };
+      createTeam(payload).then(() => {
+        router.push('/teams/teams');
+      });
+    }
   };
 
   return (
@@ -58,7 +63,11 @@ TeamForm.propTypes = {
     logoUrl: PropTypes.string,
     name: PropTypes.string,
     firebaseKey: PropTypes.string,
-  }).isRequired,
+  }),
+};
+
+TeamForm.defaultProps = {
+  obj: initialState,
 };
 
 export default TeamForm;
