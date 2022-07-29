@@ -5,6 +5,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
+import { getTeams } from '../../api/teamsData';
 import { createPlayer, updatePlayer } from '../../api/playersData';
 
 const initialState = {
@@ -16,10 +17,13 @@ const initialState = {
 };
 function PlayerForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
+  const [teams, setTeams] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
 
   useEffect(() => {
+    getTeams(user.uid).then(setTeams);
+
     if (obj?.firebaseKey) setFormInput(obj);
   }, [obj, user]);
 
@@ -58,6 +62,28 @@ function PlayerForm({ obj }) {
       </FloatingLabel>
       <FloatingLabel controlId="floatingInput4" label="Image URL" className="mb-3">
         <Form.Control type="url" placeholder="Enter image url" name="imageUrl" value={formInput.imageUrl} onChange={handleChange} required />
+      </FloatingLabel>
+      <FloatingLabel controlId="floatingSelect" label="Team">
+        <Form.Select
+          aria-label="Team"
+          name="team_id"
+          onChange={handleChange}
+          className="mb-3"
+          required
+        >
+          <option value="">Select a Team</option>
+          {
+            teams.map((team) => (
+              <option
+                key={team.firebaseKey}
+                value={team.firebaseKey}
+                selected={obj?.team_id === team.firebaseKey}
+              >
+                {team.name}
+              </option>
+            ))
+          }
+        </Form.Select>
       </FloatingLabel>
       <Button type="submit" variant="success" className="form-btn">{obj?.firebaseKey ? 'Update' : 'Add'} Player</Button>
     </Form>
