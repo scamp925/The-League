@@ -21,7 +21,7 @@ function Home() {
   return (
     <div>
       <header>
-        <h1>Teams</h1>
+        <h1 className="title">Teams</h1>
       </header>
       <div className="cards-container">
         {teams?.map((team) => (
