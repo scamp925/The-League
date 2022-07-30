@@ -15,9 +15,14 @@ export default function ViewTeam() {
 
   return (
     <div>
-      {teamDetails.players?.map((player) => (
-        <PlayerCards key={player.firebaseKey} playerObj={player} onUpdate={viewTeamDetails} />
-      ))}
+      <header>
+        <h1 className="title">Players</h1>
+      </header>
+      <div className="cards-container">
+        {teamDetails.players?.map((player) => (
+          <PlayerCards key={player.firebaseKey} playerObj={player} onUpdate={viewTeamDetails} />
+        ))}
+      </div>
     </div>
   );
 }
