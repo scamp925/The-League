@@ -50,7 +50,8 @@ function PlayerForm({ obj }) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h1 className="text-black mt-5">{obj?.firebaseKey ? 'Update' : 'Add'} a Player</h1>
+      <h1 className="title mt-5">{obj?.firebaseKey ? 'Update' : 'Add'} a Player</h1>
+      <div className="margin-top" />
       <FloatingLabel controlId="floatingInput1" label="Full Name" className="mb-3">
         <Form.Control type="text" placeholder="Ex: Frederico Chiesa" name="name" value={formInput.name} onChange={handleChange} required />
       </FloatingLabel>
@@ -82,7 +83,7 @@ function PlayerForm({ obj }) {
             ))
           }
       </Form.Select>
-      <Button type="submit" variant="success" className="form-btn">{obj?.firebaseKey ? 'Update' : 'Add'} Player</Button>
+      <Button type="submit" variant="dark" className="form-btn">{obj?.firebaseKey ? 'Update' : 'Add'} Player</Button>
     </Form>
   );
 }

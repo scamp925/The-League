@@ -3,7 +3,8 @@
 
 html,
 body {
-  background-image: linear-gradient(to right, green, white, red );
+  background: url(https://soccerprime.com/wp-content/uploads/2020/08/soccer-field.jpg) no-repeat center center fixed;
+  background-size: cover;
   padding: 0;
   margin: 0;
   font-family: 'Lora', serif;
@@ -49,7 +50,7 @@ a {
 }
 
 .navbar-container {
-  width: 31%;
+  width: 40%;
   margin: auto;
 }
 
@@ -61,6 +62,15 @@ a {
 header {
   margin: 35px;
   text-align: center;
+}
+
+.title {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  width: 33%;
 }
 
 .cards-container {
@@ -95,15 +105,26 @@ header {
   min-width: 58%;
 }
 
-footer {
+.team-card-footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+
+.player-cards-footer {
   margin: 10px 0px 15px 80px;
 }
 
-footer .edit-btn {
+.player-cards-footer .edit-btn {
   margin-right: 10px;
 }
 
-/* ADD A PLAYER FORM */
+/* ADD A PLAYER/TEAM FORM */
+.margin-top {
+  margin-top: 35px;
+}
+
 .form-btn {
   float: right;
+  margin-right: 15px;
 }

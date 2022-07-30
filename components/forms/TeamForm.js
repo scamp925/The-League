@@ -45,14 +45,15 @@ function TeamForm({ obj }) {
   return (
     <div>
       <Form onSubmit={handleSubmit}>
-        <h1 className="text-black mt-5">{obj?.firebaseKey ? 'Update' : 'Add'} a Team</h1>
+        <h1 className="title mt-5">{obj?.firebaseKey ? 'Update' : 'Add'} a Team</h1>
+        <div className="margin-top" />
         <FloatingLabel controlId="floatingInput1" label="Team Name" className="mb-3">
           <Form.Control type="text" placeholder="Gli Azzurri" name="name" value={formInput.name} onChange={handleChange} required />
         </FloatingLabel>
         <FloatingLabel controlId="floatingInput2" label="Image URL of Team Logo" className="mb-3">
           <Form.Control type="url" placeholder="Enter logo url" name="logoUrl" value={formInput.logoUrl} onChange={handleChange} required />
         </FloatingLabel>
-        <Button type="submit" variant="success" className="form-btn">{obj?.firebaseKey ? 'Update' : 'Add'} Team</Button>
+        <Button type="submit" variant="dark" className="form-btn">{obj?.firebaseKey ? 'Update' : 'Add'} Team</Button>
       </Form>
     </div>
   );
