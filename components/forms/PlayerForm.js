@@ -83,7 +83,7 @@ function PlayerForm({ obj }) {
             ))
           }
       </Form.Select>
-      <Button type="submit" variant="success" className="form-btn">{obj?.firebaseKey ? 'Update' : 'Add'} Player</Button>
+      <Button type="submit" variant="dark" className="form-btn">{obj?.firebaseKey ? 'Update' : 'Add'} Player</Button>
     </Form>
   );
 }
