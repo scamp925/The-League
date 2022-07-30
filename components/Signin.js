@@ -6,7 +6,7 @@ function Signin() {
   return (
     <div className="sign-in">
       <h2 className="goal">GOOOOOAAAALLLL!!</h2>
-      <h1>You made it to Team Roster!</h1>
+      <h1>You made it to The League!</h1>
       <h6>Click the button below to get started</h6>
       <Button type="button" variant="success" size="lg" className="sign-in-btn" onClick={signIn}>
         Sign In
