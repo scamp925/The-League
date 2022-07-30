@@ -80,6 +80,11 @@ header {
   justify-content: center;
 }
 
+.addPlayerBtn {
+  font-size: x-large;
+  margin-top: 35px;
+}
+
 /* PLAYER DETAILS DISPLAY */
 .card-body {
   display: flex;
