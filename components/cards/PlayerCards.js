@@ -1,13 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
-// import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import { useAuth } from '../../utils/context/authContext';
 import { deletePlayer } from '../../api/playersData';
-// import { viewTeamDetails } from '../../api/mergedData';
 import { getTeams } from '../../api/teamsData';
 
 function PlayerCards({ playerObj, onUpdate }) {
@@ -18,8 +16,6 @@ function PlayerCards({ playerObj, onUpdate }) {
   };
 
   const [teams, setTeams] = useState([]);
-  // const router = useRouter();
-  // const { firebaseKey } = router.query;
   const { user } = useAuth();
 
   const findTeam = teams?.find((team) => playerObj.team_id === team.firebaseKey);
