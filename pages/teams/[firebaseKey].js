@@ -8,10 +8,13 @@ export default function ViewTeam() {
   const router = useRouter();
 
   const { firebaseKey } = router.query;
+  const playersForThisTeam = () => {
+    viewTeamDetails(firebaseKey).then(setTeamDetails);
+  };
 
   useEffect(() => {
-    viewTeamDetails(firebaseKey).then(setTeamDetails);
-  }, [firebaseKey]);
+    playersForThisTeam();
+  }, []);
 
   return (
     <div>
@@ -20,7 +23,7 @@ export default function ViewTeam() {
       </header>
       <div className="cards-container">
         {teamDetails.players?.map((player) => (
-          <PlayerCards key={player.firebaseKey} playerObj={player} onUpdate={viewTeamDetails} />
+          <PlayerCards key={player.firebaseKey} playerObj={player} onUpdate={playersForThisTeam} />
         ))}
       </div>
     </div>
