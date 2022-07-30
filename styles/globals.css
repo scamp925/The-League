@@ -10,6 +10,15 @@ body {
   font-family: 'Lora', serif;
 }
 
+h1 {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  width: 35%;
+}
+
 a {
   color: inherit;
   text-decoration: none;
