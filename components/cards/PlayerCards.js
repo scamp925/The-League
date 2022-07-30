@@ -42,7 +42,7 @@ function PlayerCards({ playerObj, onUpdate }) {
             <Card.Text className="team-name">{findTeam?.name}</Card.Text>
           </section>
         </Card.Body>
-        <footer>
+        <footer className="player-cards-footer">
           <Link href={`/players/edit/${playerObj.firebaseKey}`} passHref>
             <Button variant="info" className="edit-btn">Edit</Button>
           </Link>

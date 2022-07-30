@@ -105,11 +105,17 @@ header {
   min-width: 58%;
 }
 
-footer {
+.team-card-footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+
+.player-cards-footer {
   margin: 10px 0px 15px 80px;
 }
 
-footer .edit-btn {
+.player-cards-footer .edit-btn {
   margin-right: 10px;
 }
 
