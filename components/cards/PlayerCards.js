@@ -1,22 +1,28 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
+// import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import { useAuth } from '../../utils/context/authContext';
 import { deletePlayer } from '../../api/playersData';
+// import { viewTeamDetails } from '../../api/mergedData';
 import { getTeams } from '../../api/teamsData';
 
 function PlayerCards({ playerObj, onUpdate }) {
-  const [teams, setTeams] = useState([]);
-  const { user } = useAuth();
-
   const deleteThisPlayer = () => {
     if (window.confirm(`Warning: ${playerObj.name} will be permanently deleted. Are you sure you want to continue?`)) {
       deletePlayer(playerObj.firebaseKey).then(() => onUpdate());
     }
   };
+
+  const [teams, setTeams] = useState([]);
+  // const router = useRouter();
+  // const { firebaseKey } = router.query;
+  const { user } = useAuth();
+
+  const findTeam = teams?.find((team) => playerObj.team_id === team.firebaseKey);
 
   useEffect(() => {
     getTeams(user.uid).then(setTeams);
@@ -33,7 +39,7 @@ function PlayerCards({ playerObj, onUpdate }) {
           <section className="flex-child name-and-position">
             <Card.Title>{playerObj.name}</Card.Title>
             <Card.Text>{playerObj.position}</Card.Text>
-            <Card.Text>{teams?.name}</Card.Text>
+            <Card.Text className="team-name">{findTeam?.name}</Card.Text>
           </section>
         </Card.Body>
         <footer>

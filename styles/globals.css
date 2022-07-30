@@ -85,13 +85,18 @@ header {
   font-weight: bold;
 }
 
+.team-name {
+  font-size: larger;
+  font-style: italic;
+}
+
 .name-and-position {
   margin-top: 15px;
   min-width: 58%;
 }
 
 footer {
-  margin: 20px 0px 15px 80px;
+  margin: 10px 0px 15px 80px;
 }
 
 footer .edit-btn {
