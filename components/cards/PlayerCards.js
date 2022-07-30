@@ -39,7 +39,7 @@ function PlayerCards({ playerObj, onUpdate }) {
           <section className="flex-child name-and-position">
             <Card.Title>{playerObj.name}</Card.Title>
             <Card.Text>{playerObj.position}</Card.Text>
-            <Card.Text>{findTeam?.name}</Card.Text>
+            <Card.Text className="team-name">{findTeam?.name}</Card.Text>
           </section>
         </Card.Body>
         <footer>
