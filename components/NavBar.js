@@ -4,14 +4,11 @@ import Link from 'next/link';
 import {
   Navbar, Container, Nav, Button, NavDropdown,
 } from 'react-bootstrap';
-import { useAuth } from '../utils/context/authContext';
 import { signOut } from '../utils/auth';
 
 export default function NavBar() {
-  const { user } = useAuth();
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-      <p className="display-name">Ciao, {user.displayName}!</p>
       <Container className="navbar-container">
         <Link passHref href="/">
           <Navbar.Brand>HOME</Navbar.Brand>
