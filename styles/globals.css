@@ -42,16 +42,9 @@ a {
 }
 
 /* NAVBAR */
-.display-name {
-  margin-top: 13px;
-  margin-left: 90px;
-  min-width: 16%;
-  font-size: x-large;
-}
-
 .navbar-container {
-  width: 40%;
-  margin: auto;
+  margin-left: 200px;
+  width: 50%;
 }
 
 .sign-out-btn {
