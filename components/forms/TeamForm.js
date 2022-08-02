@@ -10,6 +10,7 @@ import { createTeam, updateTeam } from '../../api/teamsData';
 const initialState = {
   logoUrl: '',
   name: '',
+  public: false,
   firebaseKey: '',
 };
 function TeamForm({ obj }) {
@@ -53,6 +54,18 @@ function TeamForm({ obj }) {
         <FloatingLabel controlId="floatingInput2" label="Image URL of Team Logo" className="mb-3">
           <Form.Control type="url" placeholder="Enter logo url" name="logoUrl" value={formInput.logoUrl} onChange={handleChange} required />
         </FloatingLabel>
+        <Form.Check
+          className="text-white mb-3"
+          type="switch"
+          id="public"
+          name="public"
+          label="Make Public?"
+          checked={formInput.public}
+          onChange={(e) => setFormInput((prevState) => ({
+            ...prevState,
+            public: e.target.checked,
+          }))}
+        />
         <Button type="submit" variant="dark" className="form-btn">{obj?.firebaseKey ? 'Update' : 'Add'} Team</Button>
       </Form>
     </div>
@@ -63,6 +76,7 @@ TeamForm.propTypes = {
   obj: PropTypes.shape({
     logoUrl: PropTypes.string,
     name: PropTypes.string,
+    public: PropTypes.bool,
     firebaseKey: PropTypes.string,
   }),
 };
