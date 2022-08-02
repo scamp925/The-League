@@ -30,6 +30,13 @@ const getTeamPlayers = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// GET PUBLIC TEAMS
+const getPublicTeams = () => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/teams.json?orderBy="public"&equalTo=true`)
+    .then((response) => resolve(Object.values(response.data)))
+    .catch(reject);
+});
+
 // CREATE TEAM
 const createTeam = (newTeamObj) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/teams.json`, newTeamObj)
@@ -61,6 +68,7 @@ export {
   getTeams,
   getSingleTeam,
   getTeamPlayers,
+  getPublicTeams,
   createTeam,
   updateTeam,
   deleteTeam,
