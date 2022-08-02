@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  Navbar, Container, Nav, Button,
+  Navbar, Container, Nav, Button, NavDropdown,
 } from 'react-bootstrap';
 import { useAuth } from '../utils/context/authContext';
 import { signOut } from '../utils/auth';
@@ -20,18 +20,15 @@ export default function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
-            <Link passHref href="/teams/teams">
-              <Nav.Link>TEAMS</Nav.Link>
-            </Link>
-            <Link passHref href="/teams/new">
-              <Nav.Link>ADD A TEAM</Nav.Link>
-            </Link>
-            <Link passHref href="/players/teamRoster">
-              <Nav.Link>PLAYERS</Nav.Link>
-            </Link>
-            <Link passHref href="/players/new">
-              <Nav.Link>ADD A PLAYER</Nav.Link>
-            </Link>
+            <NavDropdown title="TEAMS" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/teams/teams">PUBLIC TEAMS</NavDropdown.Item>
+              <NavDropdown.Item href="/teams/teams">MY TEAMS</NavDropdown.Item>
+              <NavDropdown.Item href="/teams/new">ADD A TEAM</NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="PLAYERS" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/players/teamRoster">VIEW PLAYERS</NavDropdown.Item>
+              <NavDropdown.Item href="/players/new">ADD A PLAYER</NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
