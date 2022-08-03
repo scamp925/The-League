@@ -22,7 +22,7 @@ export default function PublicTeams() {
       </header>
       <div className="cards-container">
         {publicTeams?.map((publicTeam) => (
-          <TeamCards key={publicTeam.firebaseKey} publicTeamObj={publicTeam} onUpdate={getAllPublicTeams} />
+          <TeamCards key={publicTeam.firebaseKey} teamObj={publicTeam} onUpdate={getAllPublicTeams} />
         ))}
       </div>
     </>
