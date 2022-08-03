@@ -47,7 +47,7 @@ function TeamCards({ teamObj, onUpdate }) {
         </Card.Body>
         <footer className="team-card-footer">
           <Link href={`/teams/${teamObj.firebaseKey}`} passHref>
-            <Button variant="success" className="view-btn">View</Button>
+            <Button variant="success" className="view-btn">View Players</Button>
           </Link>
         </footer>
       </Card>

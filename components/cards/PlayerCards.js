@@ -24,6 +24,31 @@ function PlayerCards({ playerObj, onUpdate }) {
     getTeams(user.uid).then(setTeams);
   }, []);
 
+  if (user.uid === playerObj.uid) {
+    return (
+      <div>
+        <Card style={{ width: '18rem', margin: '10px' }}>
+          <Card.Img variant="top" src={playerObj.imageUrl} alt={playerObj.name} />
+          <Card.Body>
+            <section className="flex-child">
+              <Card.Text>#{playerObj.jerseyNumber}</Card.Text>
+            </section>
+            <section className="flex-child name-and-position">
+              <Card.Title>{playerObj.name}</Card.Title>
+              <Card.Text>{playerObj.position}</Card.Text>
+              <Card.Text className="team-name">{findTeam?.name}</Card.Text>
+            </section>
+          </Card.Body>
+          <footer className="player-cards-footer">
+            <Link href={`/players/edit/${playerObj.firebaseKey}`} passHref>
+              <Button variant="info" className="edit-btn">Edit</Button>
+            </Link>
+            <Button variant="danger" onClick={deleteThisPlayer}>Delete</Button>
+          </footer>
+        </Card>
+      </div>
+    );
+  }
   return (
     <div>
       <Card style={{ width: '18rem', margin: '10px' }}>
@@ -38,12 +63,6 @@ function PlayerCards({ playerObj, onUpdate }) {
             <Card.Text className="team-name">{findTeam?.name}</Card.Text>
           </section>
         </Card.Body>
-        <footer className="player-cards-footer">
-          <Link href={`/players/edit/${playerObj.firebaseKey}`} passHref>
-            <Button variant="info" className="edit-btn">Edit</Button>
-          </Link>
-          <Button variant="danger" onClick={deleteThisPlayer}>Delete</Button>
-        </footer>
       </Card>
     </div>
   );
@@ -57,6 +76,7 @@ PlayerCards.propTypes = {
     position: PropTypes.string,
     jerseyNumber: PropTypes.number,
     team_id: PropTypes.string,
+    uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
