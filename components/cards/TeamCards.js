@@ -15,8 +15,8 @@ function TeamCards({ teamObj, onUpdate }) {
 
   const { user } = useAuth();
 
-  const publicVsPrivate = () => {
-    if (user.uid === teamObj.uid) {
+  if (user.uid === teamObj.uid) {
+    return (
       <div>
         <Card style={{ width: '18rem', margin: '10px' }}>
           <Card.Img variant="top" src={teamObj.logoUrl} alt={teamObj.name} />
@@ -34,28 +34,23 @@ function TeamCards({ teamObj, onUpdate }) {
             <Button variant="danger" onClick={deleteTeamPlusPlayers}>Delete</Button>
           </footer>
         </Card>
-      </div>;
-    } else {
-      <div>
-        <Card style={{ width: '18rem', margin: '10px' }}>
-          <Card.Img variant="top" src={teamObj.logoUrl} alt={teamObj.name} />
-          <Card.Body>
-            <Card.Title>{teamObj.name}</Card.Title>
-            <Card.Text>{teamObj.public === true ? 'Public Team' : 'Private Team'}</Card.Text>
-          </Card.Body>
-          <footer className="team-card-footer">
-            <Link href={`/teams/${teamObj.firebaseKey}`} passHref>
-              <Button variant="success" className="view-btn">View</Button>
-            </Link>
-          </footer>
-        </Card>
-      </div>;
-    }
-  };
-
+      </div>
+    );
+  }
   return (
     <div>
-      {publicVsPrivate}
+      <Card style={{ width: '18rem', margin: '10px' }}>
+        <Card.Img variant="top" src={teamObj.logoUrl} alt={teamObj.name} />
+        <Card.Body>
+          <Card.Title>{teamObj.name}</Card.Title>
+          <Card.Text>{teamObj.public === true ? 'Public Team' : 'Private Team'}</Card.Text>
+        </Card.Body>
+        <footer className="team-card-footer">
+          <Link href={`/teams/${teamObj.firebaseKey}`} passHref>
+            <Button variant="success" className="view-btn">View</Button>
+          </Link>
+        </footer>
+      </Card>
     </div>
   );
 }
