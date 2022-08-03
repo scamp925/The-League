@@ -18,7 +18,7 @@ export default function NavBar() {
           <Nav className="me-auto">
             {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
             <NavDropdown title="TEAMS" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/teams/teams">PUBLIC TEAMS</NavDropdown.Item>
+              <NavDropdown.Item href="/teams/publicTeams">PUBLIC TEAMS</NavDropdown.Item>
               <NavDropdown.Item href="/teams/teams">MY TEAMS</NavDropdown.Item>
               <NavDropdown.Item href="/teams/new">ADD A TEAM</NavDropdown.Item>
             </NavDropdown>
