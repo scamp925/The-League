@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
@@ -44,6 +45,7 @@ function TeamCards({ teamObj, onUpdate }) {
         <Card.Body>
           <Card.Title>{teamObj.name}</Card.Title>
           <Card.Text>{teamObj.public === true ? 'Public Team' : 'Private Team'}</Card.Text>
+          <Card.Text>Created By: {teamObj.userDisplayName}</Card.Text>
         </Card.Body>
         <footer className="team-card-footer">
           <Link href={`/teams/${teamObj.firebaseKey}`} passHref>
@@ -62,6 +64,8 @@ TeamCards.propTypes = {
     name: PropTypes.string,
     public: PropTypes.bool,
     uid: PropTypes.string,
+    userDisplayName: PropTypes.string,
+    userPhoto: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
