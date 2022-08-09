@@ -57,6 +57,11 @@ header {
   text-align: center;
 }
 
+.home-title {
+  background-color: white;
+  border-radius: 5px;
+}
+
 .title {
   background-color: white;
   border-radius: 5px;
