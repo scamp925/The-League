@@ -89,7 +89,7 @@ header {
 }
 
 /* PLAYER DETAILS DISPLAY */
-.card-body {
+.player-card-body {
   display: flex;
 }
 

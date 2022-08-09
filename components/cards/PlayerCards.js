@@ -53,7 +53,7 @@ function PlayerCards({ playerObj, onUpdate }) {
     <div>
       <Card style={{ width: '18rem', margin: '10px' }}>
         <Card.Img variant="top" src={playerObj.imageUrl} alt={playerObj.name} />
-        <Card.Body>
+        <Card.Body className="player-card-body">
           <section className="flex-child">
             <Card.Text>#{playerObj.jerseyNumber}</Card.Text>
           </section>
