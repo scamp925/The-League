@@ -36,7 +36,9 @@ function TeamForm({ obj }) {
       updateTeam(formInput)
         .then(() => router.push('/teams/teams'));
     } else {
-      const payload = { ...formInput, uid: user.uid };
+      const payload = {
+        ...formInput, uid: user.uid, userDisplayName: user.displayName, userPhoto: user.photoURL,
+      };
       createTeam(payload).then(() => {
         router.push('/teams/teams');
       });
