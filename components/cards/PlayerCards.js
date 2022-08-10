@@ -29,7 +29,7 @@ function PlayerCards({ playerObj, onUpdate }) {
       <div>
         <Card style={{ width: '18rem', margin: '10px' }}>
           <Card.Img variant="top" src={playerObj.imageUrl} alt={playerObj.name} />
-          <Card.Body>
+          <Card.Body className="player-card-body">
             <section className="flex-child">
               <Card.Text>#{playerObj.jerseyNumber}</Card.Text>
             </section>
@@ -37,6 +37,8 @@ function PlayerCards({ playerObj, onUpdate }) {
               <Card.Title>{playerObj.name}</Card.Title>
               <Card.Text>{playerObj.position}</Card.Text>
               <Card.Text className="team-name">{findTeam?.name}</Card.Text>
+              <p className="card-text bold">{playerObj.favorite ? <span className="badge bg-success favorite-badge"><i className="fa fa-heart bold" aria-hidden="true" />Favorite</span> : ''}
+              </p>
             </section>
           </Card.Body>
           <footer className="player-cards-footer">
@@ -76,6 +78,7 @@ PlayerCards.propTypes = {
     position: PropTypes.string,
     jerseyNumber: PropTypes.number,
     team_id: PropTypes.string,
+    favorite: PropTypes.bool,
     uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
