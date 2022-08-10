@@ -23,7 +23,7 @@ function TeamCards({ teamObj, onUpdate }) {
           <Card.Img variant="top" src={teamObj.logoUrl} alt={teamObj.name} />
           <Card.Body>
             <Card.Title>{teamObj.name}</Card.Title>
-            <Card.Text>{teamObj.public === true ? 'Public Team' : 'Private Team'}</Card.Text>
+            <Card.Text>My {teamObj.public === true ? 'Public Team' : 'Private Team'}</Card.Text>
           </Card.Body>
           <footer className="team-card-footer">
             <Link href={`/teams/${teamObj.firebaseKey}`} passHref>
@@ -65,7 +65,6 @@ TeamCards.propTypes = {
     public: PropTypes.bool,
     uid: PropTypes.string,
     userDisplayName: PropTypes.string,
-    userPhoto: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
