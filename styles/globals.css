@@ -42,16 +42,9 @@ a {
 }
 
 /* NAVBAR */
-.display-name {
-  margin-top: 13px;
-  margin-left: 90px;
-  min-width: 16%;
-  font-size: x-large;
-}
-
 .navbar-container {
-  width: 40%;
-  margin: auto;
+  margin-left: 200px;
+  width: 50%;
 }
 
 .sign-out-btn {
@@ -62,6 +55,11 @@ a {
 header {
   margin: 35px;
   text-align: center;
+}
+
+.home-title {
+  background-color: white;
+  border-radius: 5px;
 }
 
 .title {
@@ -96,7 +94,7 @@ header {
 }
 
 /* PLAYER DETAILS DISPLAY */
-.card-body {
+.player-card-body {
   display: flex;
 }
 
