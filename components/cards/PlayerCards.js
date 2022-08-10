@@ -76,7 +76,7 @@ PlayerCards.propTypes = {
     imageUrl: PropTypes.string,
     name: PropTypes.string,
     position: PropTypes.string,
-    jerseyNumber: PropTypes.number,
+    jerseyNumber: PropTypes.string,
     team_id: PropTypes.string,
     favorite: PropTypes.bool,
     uid: PropTypes.string,

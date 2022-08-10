@@ -105,7 +105,7 @@ PlayerForm.propTypes = {
     imageUrl: PropTypes.string,
     name: PropTypes.string,
     position: PropTypes.string,
-    jerseyNumber: PropTypes.number,
+    jerseyNumber: PropTypes.string,
     team_id: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
