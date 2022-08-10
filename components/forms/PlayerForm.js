@@ -83,6 +83,18 @@ function PlayerForm({ obj }) {
             ))
           }
       </Form.Select>
+      <Form.Check
+        className="text-white mb-3"
+        type="switch"
+        id="favorite"
+        name="favorite"
+        label="Set as Favorite?"
+        checked={formInput.favorite}
+        onChange={(e) => setFormInput((prevState) => ({
+          ...prevState,
+          favorite: e.target.checked,
+        }))}
+      />
       <Button type="submit" variant="dark" className="form-btn">{obj?.firebaseKey ? 'Update' : 'Add'} Player</Button>
     </Form>
   );
