@@ -84,7 +84,7 @@ function PlayerForm({ obj }) {
           }
       </Form.Select>
       <Form.Check
-        className="text-white mb-3"
+        className="toggle-btn mb-3"
         type="switch"
         id="favorite"
         name="favorite"

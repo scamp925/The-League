@@ -146,3 +146,9 @@ header {
   float: right;
   margin-right: 15px;
 }
+
+.toggle-btn {
+  color: black;
+  font-size: larger;
+  font-weight: bold;
+}

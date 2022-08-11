@@ -57,7 +57,7 @@ function TeamForm({ obj }) {
           <Form.Control type="url" placeholder="Enter logo url" name="logoUrl" value={formInput.logoUrl} onChange={handleChange} required />
         </FloatingLabel>
         <Form.Check
-          className="text-white mb-3"
+          className="toggle-btn mb-3"
           type="switch"
           id="public"
           name="public"
