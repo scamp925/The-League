@@ -8,17 +8,15 @@ function Home() {
   const [fav, setFav] = useState([]);
   const { user } = useAuth();
 
-  const getAllPlayers = () => {
-    getPlayers(user.uid).then(setFav);
-  };
-
   const favoritePlayer = () => {
-    const results = fav?.filter((favPlayer) => favPlayer.favorite === true);
-    setFav(results);
+    getPlayers(user.uid).then((playersArray) => {
+      const results = playersArray.filter((favPlayer) => favPlayer.favorite === true);
+      setFav(results);
+    });
   };
 
   useEffect(() => {
-    getAllPlayers();
+    favoritePlayer();
   }, []);
 
   return (
@@ -26,7 +24,7 @@ function Home() {
       <header className="home-title">
         <h1>Ciao, {user.displayName}!</h1>
       </header>
-      <section>
+      <section className="cards-container">
         {fav?.map((favPlayer) => (
           <PlayerCards key={favPlayer?.firebaseKey} playerObj={favPlayer} onUpdate={favoritePlayer} />
         ))}
