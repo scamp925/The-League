@@ -1,80 +1,61 @@
-# React/Next.js Template
+# The League
 
-[See Live Demo of this Template](https://drt-next-js-template.netlify.app/)
+[See Live Demo of The League](https://drt-next-js-template.netlify.app/)
 
-## [Team Roster Instructions](./INSTRUCTIONS.md)
+[The League Walkthrough Video Part 1](https://www.loom.com/share/a111e93599af45d999626309936ec3c3)
+
+[The League Walkthrough Video Part 2](https://www.loom.com/share/41b19435116349b08bf704d377ff9d64)
 
 ## Topics
-- [Get Started](#get-started)
-- [Starting the Project](#starting-the-project)
-- [Using axios](#using-axios)
-- [Deploying on Netlify](#deploying-on-netlify)
+- [So, What Is Plated?](#so-what-is-plated)
+- [MVP](#mvp)
+- [Stretch Features](#stretch-features)
+- [Try The League Out For Yourself](#try-the-league-out-for-yourself)
+- [Planning for The League](#planning-for-plated)
+- [How Has The League Sharpened My Skills?](#how-has-the-league-sharpened-my-skills)
+- [Tech Stacks Used](#tech-stacks)
 ___
-## Getting Started
-### Use Template
-#### 1. To get started, click the GREEN "Use this Template" button at the top of the repo
-<img width="915" alt="Screen Shot 2022-07-06 at 12 54 01 PM" src="https://user-images.githubusercontent.com/29741570/177612998-4aac9237-5a1e-4f13-8ae0-468587521564.png">
 
-#### 2. Make sure YOUR github account is selected in the dropdown and name your project
-<img width="763" alt="Screen Shot 2022-07-06 at 12 54 48 PM" src="https://user-images.githubusercontent.com/29741570/177613126-dd38f678-7553-4f27-8a4a-75680f14d71e.png">
+## MVP
+The League is a new iteration of a previous project called "Team Roster". To see The League's MVP code, [click here](https://github.com/scamp925/team-roster) to be taken to Team Roster on Github.
 
-#### 3. Clone your new repo to your local machine
-#### 4. Go to the **NEXT** section
+## Stretch Features
+## Try The League Out For Yourself
+1. Create a [Firebase](https://firebase.google.com/) project and set up authentication
 
-## Starting the Project
-1. Create a Firebase project and set up authentication. Use [these videos](https://vimeo.com/showcase/codetracker-firebase) as a refresher if needed.
-1. Create a `.env` file at the root of the project
-1. Copy/Paste the contents of the `.env.sample` file to your newly created `.env` file.
-1. Copy over all of your Firebase values into the `.env` file.
-1. Open the `package.json` file and change the `name` property to the name of your application, and `author` to  your name.
-1. From your command line, be in the root directory and run `npm install` OR `npm i` for short.
-1. Next, run `npm run prepare`. This command sets up husky to track eslint errors on commit that will make your deploy fail on Netlify.
-1. To start your application, run `npm run dev`. THIS IS THE COMMAND YOU WILL USE TO RUN YOUR DEVELOPMENT SERVER FROM NOW ON.
-1. Open [http://localhost:3000](http://localhost:3000) with your browser.
-
-### If you see this, you are set to go!
-<img width="450" alt="Screen Shot 2022-07-06 at 1 07 27 PM" src="https://user-images.githubusercontent.com/29741570/177615077-9b6a75bc-0260-4d29-bb88-bd95a3140687.png">
-
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-**NOTES:** 
-- If you see the following error, you did not follow all the setup steps correctly and failed to add your Firebase creds. Go back and do that NOW.
-
-<img width="1043" alt="Screen Shot 2022-07-06 at 11 18 45 AM" src="https://user-images.githubusercontent.com/29741570/177612501-c2628f18-4bbd-4de9-aae6-27ffba1172d6.png">
-
-### Using Axios
-> For every file you will need to make an XHR request in, you will need to require Axios
-```js
-import axios from 'axios';
-
-const examplePromise = () => {
-  axios.get('http://localhost:3001/example')
-    .then((data) => {
-      console.warn(data);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-});
+2. Clone Plated to your local server
+``` bash
+git@github.com:scamp925/Plated-Front-End-Capstone.git
 ```
+3. Once in Plated's code, create a .env file at the root of the project
+4. Copy the environmental variables from Firebase and Paste them as the properties of the keys found in your newly created .env file
+5. Import sample data found in data folder in Plated to Realtime Database in your Firebase project
+![finding-sample-data](https://user-images.githubusercontent.com/98675776/191889055-468ebbbd-3143-4362-8adf-99668352d15c.png)
+6. Be in the root directory and from your command line, run
+``` bash
+npm install or npm i
+```
+7. Now from your command line, run
+``` bash
+npm run prepare
+```
+8. To start Plated, run
+``` bash
+npm run dev
+```
+9. Open http://localhost:3000 with your browser and enjoy Plated!
 
-### Deploying on Netlify
-Netlify will automatically detect your project and prepopulate the settings, but should something go wrong and it does not, here are the commands:
+## Planning for The League
 
-- Build Command: `npm run build`
-- Publish directory: `.next`
+## How Has The League Sharpened My Skills?
 
-#### Additional Steps to Take on Netlify
-- Add Environmental Variables
-    - Any Enviromental variables you are using in your `.env` file should be added to Netlify. 
-        - Go to Site settings > Build & deploy > Environment > Environment variables and the keys and values there.
-
-- Update Firebase URL Settings
-    - In Firebase under Authentication select sign in methods, scroll to Authorized domains. Add your Netlify URL.
-        
-## Learn More about Next.js
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stacks
+<div align="center">  
+<a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
+<a href="https://nextjs.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="40" height="40"/>
+<a href="https://firebase.google.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/firebase.png" alt="Firebase" height="50" /></a> 
+<a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /></a>  
+<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>  
+<a href="https://getbootstrap.com/docs/3.4/javascript/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="50" /></a>  
+<a href="https://www.figma.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" height="50" /></a>  
+</div>
