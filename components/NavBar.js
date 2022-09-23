@@ -16,7 +16,6 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
             <NavDropdown title="TEAMS" id="basic-nav-dropdown">
               <NavDropdown.Item href="/teams/publicTeams">PUBLIC TEAMS</NavDropdown.Item>
               <NavDropdown.Item href="/teams/teams">MY TEAMS</NavDropdown.Item>

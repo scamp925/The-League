@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
 import { getPlayers } from '../api/playersData';
 import { useAuth } from '../utils/context/authContext';
 import PlayerCards from './cards/PlayerCards';
@@ -23,16 +22,5 @@ function FavoritePlayers() {
     </div>
   );
 }
-
-// FavoritePlayers.propTypes = {
-//   players: PropTypes.arrayOf(PropTypes.shape({
-//     firebaseKey: PropTypes.string,
-//     favorite: PropTypes.bool,
-//   })),
-// };
-
-// FavoritePlayers.defaultProps = {
-//   players: {},
-// };
 
 export default FavoritePlayers;
