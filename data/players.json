@@ -1,0 +1,142 @@
+{
+  "-N7bMPWeGG55i4hmjyBD": {
+    "favorite": true,
+    "firebaseKey": "-N7bMPWeGG55i4hmjyBD",
+    "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/Italy-v-Switzerland---UEFA-Euro-2020-Group-A-dada0cedeef007169b73bf6f1ed8ab2f.jpg",
+    "jerseyNumber": "3",
+    "name": "Giorgio Chiellini",
+    "position": "Defender",
+    "team_id": "-N85pJ-iBVhgIN3iFcKu",
+    "uid": "DLCmCXoBVjd8mBbLfqaqDvC0Oiw2"
+  },
+  "-N7iQLizXc_xDzH2B-c8": {
+    "favorite": false,
+    "firebaseKey": "-N7iQLizXc_xDzH2B-c8",
+    "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_fill,w_912,h_516,f_auto,q_auto,g_auto/shape/cover/sport/italy-v-holland-international-friendly-5b62e7767c25c8725e000041.jpg",
+    "jerseyNumber": "19",
+    "name": "Leonardo Bonucci",
+    "position": "Defender",
+    "team_id": "-N85pJ-iBVhgIN3iFcKu",
+    "uid": "DLCmCXoBVjd8mBbLfqaqDvC0Oiw2"
+  },
+  "-N7iR947fP0QxoDA8QGD": {
+    "favorite": true,
+    "firebaseKey": "-N7iR947fP0QxoDA8QGD",
+    "imageUrl": "https://sportsmanheight.com/wp-content/uploads/2021/08/23.jpg",
+    "jerseyNumber": "2",
+    "name": "Giovanni di Lorenzo",
+    "position": "Defender",
+    "team_id": "-N85pJ-iBVhgIN3iFcKu",
+    "uid": "DLCmCXoBVjd8mBbLfqaqDvC0Oiw2"
+  },
+  "-N7iSJT2MFaauDoWmGSP": {
+    "favorite": false,
+    "firebaseKey": "-N7iSJT2MFaauDoWmGSP",
+    "imageUrl": "https://i.guim.co.uk/img/media/56fceea8fb7e9227e5b3f7fad64ff9e08ee77e8e/0_62_3500_2100/master/3500.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=0d19d63812bd746d9554a8718ca49889",
+    "jerseyNumber": "21",
+    "name": "Gianluigi Donnarumma",
+    "position": "Goalkeeper",
+    "team_id": "-N85pJ-iBVhgIN3iFcKu",
+    "uid": "DLCmCXoBVjd8mBbLfqaqDvC0Oiw2"
+  },
+  "-N7iSxC7K7RurUMYdb__": {
+    "favorite": false,
+    "firebaseKey": "-N7iSxC7K7RurUMYdb__",
+    "imageUrl": "https://i2-prod.football.london/incoming/article18925673.ece/ALTERNATES/s1200c/0_GettyImages-1270678123.jpg",
+    "jerseyNumber": "9",
+    "name": "Andrea Belotti",
+    "position": "Forward",
+    "team_id": "-N85pJ-iBVhgIN3iFcKu",
+    "uid": "DLCmCXoBVjd8mBbLfqaqDvC0Oiw2"
+  },
+  "-N7iTRjnz5-Vqseh7UYy": {
+    "favorite": false,
+    "firebaseKey": "-N7iTRjnz5-Vqseh7UYy",
+    "imageUrl": "https://sempreinter.com/wp-content/uploads/2021/06/Matteo-Pessina-scaled-e1624443171871.jpg",
+    "jerseyNumber": "12",
+    "name": "Matteo Pessina",
+    "position": "Midfielder",
+    "team_id": "-N85pJ-iBVhgIN3iFcKu",
+    "uid": "DLCmCXoBVjd8mBbLfqaqDvC0Oiw2"
+  },
+  "-N7iTruHUKtNA8o2t0oh": {
+    "favorite": false,
+    "firebaseKey": "-N7iTruHUKtNA8o2t0oh",
+    "imageUrl": "https://i2-prod.derbytelegraph.co.uk/incoming/article5586321.ece/ALTERNATES/s1200c/1_Italy-v-Austria-UEFA-Euro-2020-Round-of-16.jpg",
+    "jerseyNumber": "11",
+    "name": "Domenico Berardi",
+    "position": "Forward",
+    "team_id": "-N85pJ-iBVhgIN3iFcKu",
+    "uid": "DLCmCXoBVjd8mBbLfqaqDvC0Oiw2"
+  },
+  "-N85TYWw9VyQWjFZ95KB": {
+    "favorite": false,
+    "firebaseKey": "-N85TYWw9VyQWjFZ95KB",
+    "imageUrl": "",
+    "jerseyNumber": "",
+    "name": "",
+    "position": "",
+    "team_id": "",
+    "uid": ""
+  },
+  "-N8Q8heiu8k7mbo6FL__": {
+    "favorite": false,
+    "firebaseKey": "-N8Q8heiu8k7mbo6FL__",
+    "imageUrl": "https://i1.sndcdn.com/avatars-000103501656-iji6a5-t500x500.jpg",
+    "jerseyNumber": "5",
+    "name": "Ringo Starr",
+    "position": "Midfielder",
+    "team_id": "-N8Q8S_aFACuKbd_1maS",
+    "uid": "JOgZPUfuYQOiiN9KCtDg12on3fA2"
+  },
+  "-N8Q8zrqsOaILPIEKyD3": {
+    "favorite": false,
+    "firebaseKey": "-N8Q8zrqsOaILPIEKyD3",
+    "imageUrl": "https://wallpaperaccess.com/full/1122915.jpg",
+    "jerseyNumber": "9",
+    "name": "Poseidon",
+    "position": "Forward",
+    "team_id": "-N8Q8S_aFACuKbd_1maS",
+    "uid": "JOgZPUfuYQOiiN9KCtDg12on3fA2"
+  },
+  "-N8Q94sff91ZzQglxlWr": {
+    "favorite": false,
+    "firebaseKey": "-N8Q94sff91ZzQglxlWr",
+    "imageUrl": "http://cdn.akc.org/content/article-body-image/funny-french_bulldog.jpg",
+    "jerseyNumber": "6",
+    "name": "Peace",
+    "position": "Goalkeeper",
+    "team_id": "-N8V-HuQknETye7F9b_g",
+    "uid": "X8SJ0xeOfveLjlBFlcQ8LopQaup1"
+  },
+  "-N8Q9HUp-FiuiplFc5mQ": {
+    "favorite": false,
+    "firebaseKey": "-N8Q9HUp-FiuiplFc5mQ",
+    "imageUrl": "https://www.thelabradorsite.com/wp-content/uploads/2019/05/funny-dog-quotes-LS-long.jpg",
+    "jerseyNumber": "3",
+    "name": "Styles",
+    "position": "Defender",
+    "team_id": "-N8Q8S_aFACuKbd_1maS",
+    "uid": "JOgZPUfuYQOiiN9KCtDg12on3fA2"
+  },
+  "-N8_H7v4cArhRcbPQzCY": {
+    "favorite": false,
+    "firebaseKey": "-N8_H7v4cArhRcbPQzCY",
+    "imageUrl": "https://deasilex.com/wp-content/uploads/2021/08/The-Fattest-Dog-In-The-World.jpg",
+    "jerseyNumber": "4",
+    "name": "Jack",
+    "position": "Defender",
+    "team_id": "-N8V-2zZWy7COSV6ns_w",
+    "uid": "JOgZPUfuYQOiiN9KCtDg12on3fA2"
+  },
+  "-N9rXzGqJLYd7cr763dG": {
+    "favorite": true,
+    "firebaseKey": "-N9rXzGqJLYd7cr763dG",
+    "imageUrl": "https://images2.minutemediacdn.com/image/fetch/w_736,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Foldjuve.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2017%2F07%2F1328194021-850x560.jpeg",
+    "jerseyNumber": "14",
+    "name": "Federico Chiesa",
+    "position": "Midfielder",
+    "team_id": "-N85pJ-iBVhgIN3iFcKu",
+    "uid": "DLCmCXoBVjd8mBbLfqaqDvC0Oiw2"
+  }
+}
