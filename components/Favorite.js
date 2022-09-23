@@ -10,7 +10,6 @@ function FavoritePlayers() {
 
   const getAllPlayers = () => {
     getPlayers(user.uid);
-    console.warn(getAllPlayers, 'Please be what I want');
   };
 
   const favoritePlayer = () => {
